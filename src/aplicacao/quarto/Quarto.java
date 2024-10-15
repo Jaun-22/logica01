@@ -1,10 +1,16 @@
 package aplicacao.quarto;
 
+import java.util.Scanner;
+
 public class Quarto {
     public void quartoExercicio() {
+        Scanner suaNota = new Scanner(System.in); //cria um objeto para entrada
+
         //EXERCÍCIO 2- AVALIAÇÃO DE DESEMPENHO
 
-        int nota = 100;
+        System.out.println("Digite sua nota, entre '10' e '100': ");
+        int nota = suaNota.nextInt();
+
         if (nota > 90) {
             System.out.println("Sua nota foi excelente: " + nota);
         } else if (nota > 80) {
@@ -16,6 +22,6 @@ public class Quarto {
         } else {
             System.out.println("sua nota foi insuficiente");
         }
-
+        suaNota.close();
     }
 }
