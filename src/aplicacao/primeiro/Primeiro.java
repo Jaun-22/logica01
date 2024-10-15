@@ -1,9 +1,13 @@
 package aplicacao.primeiro;
+import java.util.Scanner; // importa a classe scanner
 
 public class Primeiro {
     public void primeiroExecicio() {
+        Scanner ler = new Scanner(System.in);
 
-        int idade = 1;
+        System.out.println("Digite sua idade? ");
+        int idade = ler.nextInt();
+
         if (idade >= 0 && idade <= 7) {
             System.out.println(idade + " você é uma criança");
         } else if (idade >= 8 && idade <= 13) {
@@ -13,6 +17,7 @@ public class Primeiro {
         } else {
             System.out.println(idade + " você é um adulto");
         }
+        ler.close();
 
     }
 }
